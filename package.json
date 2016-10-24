@@ -7,9 +7,9 @@
     "package",
     "blueprint"
   ],
-  "homepage": "https://github.com/ThornWalli/agency-pkg-blueprint#readme",
+  "homepage": "https://github.com/agency-framework/agency-pkg-blueprint#readme",
   "bugs": {
-    "url": "https://github.com/ThornWalli/agency-pkg-blueprint/issues"
+    "url": "https://github.com/agency-framework/agency-pkg-blueprint/issues"
   },
   "license": "MIT",
   "author": "Thorn Walli <lammpee@gmail.com>",
@@ -22,7 +22,7 @@
   "main": "default.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ThornWalli/agency-pkg-blueprint.git"
+    "url": "git+https://github.com/agency-framework/agency-pkg-blueprint.git"
   },
   "scripts": {
     "install": "node ./install.js",
@@ -31,6 +31,6 @@
     "prod": "node node_modules/gulp/bin/gulp run --serverConfig=node_modules/agency-boilerplate/env/config/local.json --configTasks=env/config/tasks.json --env=package-production --server=agency-server"
   },
   "devDependencies": {
-    "agency-boilerplate": "../../agency-boilerplate"
+    "agency-boilerplate": "git+https://git@github.com/agency-framework/agency-boilerplate.git"
   }
 }
