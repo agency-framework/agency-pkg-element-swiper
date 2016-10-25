@@ -69,7 +69,7 @@
           "<%= destination %>/js/embed/_main.js",
           "<%= destination %>/js/embed/animationFrame.js",
           "<%= destination %>/js/embed/agency_pkg_polyfills.js",
-          "<%= destination %>/js/embed/agency_pkg_service_metrics.js"
+          "<%= destination %>/js/embed/agency_pkg_service_dev_tools.js"
         ]
       },
       "css": {
@@ -264,7 +264,7 @@
       "entry": {
         "animationFrame": "agency-pkg-service-animation-frame",
         "agency_pkg_polyfills": "agency-pkg-polyfills",
-        "agency_pkg_service_metrics": "agency-pkg-service-metrics"
+        "agency_pkg_service_dev_tools": "agency-pkg-service-dev-tools"
       },
       "plugins": [{
         "script": "agency-environment/lib/webpack/plugins/dedupe"
@@ -272,7 +272,7 @@
         "script": "agency-environment/lib/webpack/plugins/chunk",
         "config": {
           "main": "_main.js",
-          "packages": ["animationFrame", "agency_pkg_polyfills", "agency_pkg_service_metrics"]
+          "packages": ["animationFrame", "agency_pkg_polyfills", "agency_pkg_service_dev_tools"]
         }
       }, {
         "script": "agency-environment/lib/webpack/plugins/uglify",
