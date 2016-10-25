@@ -113,7 +113,6 @@
     <script src="http://localhost:8050/socket.io/socket.io.js" type="text/javascript"></script>
   {{/if}}
   {{#if options.server.webpack}}
-    {{{mixin "agency-pkg-documentation/breakpoint"}}}
     <script>
       var host = (location.host || 'localhost').split(':')[0];
       document.write('<script type="text/javascript" src="//' + host +':{{options.server.webpack.port}}/{{options.scripts.js.main}}"></' + 'script>');
