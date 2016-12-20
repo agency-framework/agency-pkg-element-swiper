@@ -30,7 +30,12 @@
     }]
   },
   "handlebars": {
-    "packagejs": "test/js/packages.js",
+    "registry": {
+      "js": "test/js/packages.js",
+      "pcss": "test/pcss/partials.pcss",
+      "pcssCritical": "test/pcss/partials.critical.pcss",
+      "pcssExcludes": ["agency-pkg-documentation", "agency-pkg-documentation/*"]
+    },
     "helpers": [{
       "name": "doc",
       "src": "agency-environment/lib/handlebars/helpers/doc",

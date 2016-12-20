@@ -1,1 +1,7 @@
-test/
+/test
+/build
+/export
+/generated
+/production
+/test/js/packages*
+/test/pcss/partials*
