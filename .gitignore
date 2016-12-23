@@ -43,6 +43,5 @@ node_modules_old
 /export
 /generated
 /production
-/test/js/packages*
-/test/pcss/partials.pcss
-/test/pcss/partials.critical.pcss
+/test/js/packages.*
+/test/pcss/partials.*

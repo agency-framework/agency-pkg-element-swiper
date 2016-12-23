@@ -30,12 +30,19 @@
     }]
   },
   "handlebars": {
-    "registry": {
+    "registry": [{
+      "name": "main",
+      "excludes": ["<%= destination %>/docs/"],
       "js": "test/js/packages.js",
       "pcss": "test/pcss/partials.pcss",
-      "pcssCritical": "test/pcss/partials.critical.pcss",
-      "pcssExcludes": ["agency-pkg-documentation", "agency-pkg-documentation/*"]
-    },
+      "pcssCritical": "test/pcss/partials.critical.pcss"
+    }, {
+      "name": "docs",
+      "includes": ["<%= destination %>/docs/"],
+      "js": "test/js/packages.docs.js",
+      "pcss": "test/pcss/partials.docs.pcss",
+      "pcssCritical": "test/pcss/partials.critical.docs.pcss"
+    }],
     "helpers": [{
       "name": "doc",
       "src": "agency-environment/lib/handlebars/helpers/doc",
@@ -70,6 +77,7 @@
     "scripts": {
       "js": {
         "main": "<%= destination %>/js/app.js",
+        "mainDocs": "<%= destination %>/js/app.docs.js",
         "embed": [
           "<%= destination %>/js/embed/_main.js",
           "<%= destination %>/js/embed/animationFrame.js",
@@ -78,9 +86,10 @@
         ]
       },
       "css": {
-        "docs": "css/docs.css",
         "main": "css/style.css",
-        "critical": "<%= destination %>/css/critical.css"
+        "critical": "<%= destination %>/css/critical.css",
+        "mainDocs": "css/style.docs.css",
+        "criticalDocs": "<%= destination %>/css/critical.docs.css"
       }
     },
     "subtasks": [{
@@ -182,7 +191,7 @@
         "params": []
       }],
       "files": {
-        "src": ["./test/pcss/style.pcss", "./test/pcss/critical.pcss", "./test/pcss/docs.pcss"],
+        "src": ["./test/pcss/style.pcss", "./test/pcss/critical.pcss", "./test/pcss/style.docs.pcss", "./test/pcss/critical.docs.pcss"],
         "dest": "<%= destination %>/css"
       }
     }],
