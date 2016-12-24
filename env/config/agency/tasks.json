@@ -77,7 +77,7 @@
     "scripts": {
       "js": {
         "main": "<%= destination %>/js/app.js",
-        "mainDocs": "<%= destination %>/js/app.docs.js",
+        "mainDocs": "<%= destination %>/js/appDocs.js",
         "embed": [
           "<%= destination %>/js/embed/_main.js",
           "<%= destination %>/js/embed/animationFrame.js",
@@ -276,6 +276,72 @@
         "dest": "<%= destination %>/js/[name].js",
         "library": ["[name]"]
       }
+    },{
+      "name": "docs",
+      "hotReplacement": true,
+      "entry": {
+        "docs": "./test/js/docs"
+      },
+      "plugins": [{
+        "script": "agency-environment/lib/webpack/plugins/provide",
+        "config": {
+          "$": "jquery",
+          "jQuery": "jquery",
+          "window.jQuery": "jquery",
+          "root.jQuery": "jquery"
+        }
+      }, {
+        "script": "agency-environment/lib/webpack/plugins/polyfills"
+      }, {
+        "script": "agency-environment/lib/webpack/plugins/dedupe"
+      }, {
+        "script": "agency-environment/lib/webpack/plugins/uglify",
+        "config": {
+          "compress": {
+
+          }
+        }
+      }],
+      "module": {
+        "preLoaders": [{
+          "test": ".js$",
+          "exclude": "node_modules",
+          "loader": "jshint-loader"
+        }],
+        "loaders": [{
+          "test": ".hbs$",
+          "loader": "handlebars-loader",
+          "query": {
+            "knownHelpers": ["block", "content"],
+            "helperDirs": [
+              "<%= root %>/test/tmpl/partials"
+            ],
+            "debug": false
+          },
+          "agency": {
+            "customs": ["agency-environment/lib/handlebars/customs/yamlExclude"]
+          }
+        }, {
+          "test": ".css$",
+          "loader": "style-loader!css-loader"
+        }, {
+          "test": ".(png|jpg|gif|svg|ttf|woff|eot)$",
+          "loader": "url-loader?limit=100000"
+        }, {
+          "test": ".modernizrrc$",
+          "loader": "modernizr"
+        }]
+      },
+      "resolve": {
+        "alias": {
+          "modernizr$": "<%= root %>/.modernizrrc"
+        }
+      },
+      "files": {
+        "src": ["./test/js/docs.js"],
+        "dest": "<%= destination %>/js/[name].js",
+        "library": ["[name]"]
+      }
     }, {
       "name": "embed",
       "entry": {
@@ -284,8 +350,6 @@
         "agency_pkg_service_dev_tools": "agency-pkg-service-dev-tools"
       },
       "plugins": [{
-        "script": "agency-environment/lib/webpack/plugins/dedupe"
-      }, {
         "script": "agency-environment/lib/webpack/plugins/chunk",
         "config": {
           "main": "_main.js",
