@@ -3,5 +3,5 @@
 /export
 /generated
 /production
-/test/js/packages*
-/test/pcss/partials*
+/test/js/packages.*
+/test/pcss/partials.*

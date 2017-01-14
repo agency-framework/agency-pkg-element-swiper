@@ -4,8 +4,6 @@
     "favicon": "assets/favicon/favicon.ico",
     "webAppCapable": "no",
     "statusBarStyle": "white",
-    "formatDetection": "telephone=no",
-    "author": "AUTHOR"
+    "formatDetection": "telephone=no"
   }
-
 }
