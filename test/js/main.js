@@ -2,8 +2,4 @@
 
 var js = require('agency-pkg-service-parser')(require('./packages'));
 
-(function(){
-    $(function() {
-        js.parse();
-    });
-})();
+js.parse();
