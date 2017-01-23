@@ -8,4 +8,5 @@ module.exports = Controller.extend({
         Controller.prototype.initialize.apply(this, arguments);
         this.queryByHook('message').innerHTML = 'initialized !';
     }
+
 });
