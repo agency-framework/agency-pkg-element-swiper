@@ -1,11 +1,11 @@
 {
-  "name": "agency-pkg-blueprint",
+  "name": "agency-pkg-swiper",
   "version": "0.0.1",
-  "description": "agency - frontend-package blueprint",
+  "description": "agency - frontend-package swiper",
   "keywords": [
     "boilerplate",
     "package",
-    "blueprint"
+    "swiper"
   ],
   "homepage": "https://github.com/agency-framework/agency-pkg-blueprint#readme",
   "bugs": {
@@ -17,12 +17,16 @@
     {
       "name": "Thorn Walli",
       "email": "lammpee@gmail.com; thorn.walli@grabarzundpartner.de"
+    },
+    {
+      "name": "Boris Horn",
+      "email": "horn.boris@gmail.com; boris.horn@grabarzundpartner.de"
     }
   ],
   "main": "default.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/agency-framework/agency-pkg-blueprint.git"
+    "url": "git+https://github.com/agency-framework/agency-pkg-swiper.git"
   },
   "scripts": {
     "install": "node ./install.js",
@@ -32,5 +36,8 @@
   },
   "devDependencies": {
     "agency-boilerplate": "git+https://git@github.com/agency-framework/agency-boilerplate.git"
+  },
+  "dependencies": {
+    "swiper": "^3.4.1"
   }
 }

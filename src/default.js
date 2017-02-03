@@ -7,6 +7,12 @@ module.exports = Controller.extend({
     initialize: function() {
         Controller.prototype.initialize.apply(this, arguments);
         this.queryByHook('message').innerHTML = 'initialized !';
+
+
     }
 
 });
+
+function initSwiperWithOptions(options) {
+
+}
