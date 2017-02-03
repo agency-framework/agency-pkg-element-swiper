@@ -1,5 +1,5 @@
 {
-  "name": "agency-pkg-swiper",
+  "name": "agency-pkg-element-swiper",
   "version": "0.0.1",
   "description": "agency - frontend-package swiper",
   "keywords": [
@@ -7,9 +7,9 @@
     "package",
     "swiper"
   ],
-  "homepage": "https://github.com/agency-framework/agency-pkg-blueprint#readme",
+  "homepage": "https://github.com/agency-framework/agency-pkg-element-swiper#readme",
   "bugs": {
-    "url": "https://github.com/agency-framework/agency-pkg-blueprint/issues"
+    "url": "https://github.com/agency-framework/agency-pkg-element-swiper/issues"
   },
   "license": "MIT",
   "author": "Thorn Walli <lammpee@gmail.com>",
@@ -26,7 +26,7 @@
   "main": "default.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/agency-framework/agency-pkg-swiper.git"
+    "url": "git+https://github.com/agency-framework/agency-pkg-element-swiper.git"
   },
   "scripts": {
     "install": "node ./install.js",

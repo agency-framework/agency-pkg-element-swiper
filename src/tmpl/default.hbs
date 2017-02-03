@@ -1,6 +1,59 @@
 ---
-value: 'Blueprint'
+layoutConfig:
+    addPagination: true
+    addArrows: true
+swiperConfig:
+    pagination: '.swiper-pagination'
+    nextButton: '.swiper-button-next'
+    prevButton: '.swiper-button-prev'
+    slidesPerView: 1
+    paginationClickable: true
+    spaceBetween: 30
+    loop: true
+slides:
+    -
+        config:
+            image: true
+
+    -
+        text: 'Slide 2'
+    -
+        text: 'Slide 3'
+    -
+        config:
+            image: true
+    -
+        text: 'Slide 5'
+    -
+        text: 'Slide 6'
+    -
+        text: 'Slide 7'
+    -
+        text: 'Slide 8'
 ---
-<div class="{{#if class}}{{{class}}}{{else}}pkg controller{{/if}}" {{#block "attributes"}}data-pkg="agency-pkg-blueprint" data-controller="agency-pkg-blueprint"{{/block}}>
-  {{{mixin "agency-pkg-blueprint/child" this}}} <span data-hook="message"></span>
+<div class="{{#if class}}{{{class}}}{{else}}pkg controller{{/if}}" {{#block "attributes"}}data-pkg="agency-pkg-element-swiper"
+                                                                                          data-controller="agency-pkg-element-swiper"{{/block}}>
+
+    <div class="swiper-container" data-swiper-config='{{{stringify swiperConfig}}}'>
+        <div class="swiper-wrapper">
+            {{#with slides}}
+
+                {{#each this}}
+                    {{{mixin "agency-pkg-element-swiper/slide" this}}}
+                {{/each}}
+
+            {{/with}}
+
+        </div>
+        {{#if layoutConfig.addPagination}}
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        {{/if}}
+        {{#if layoutConfig.addArrows}}
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        {{/if}}
+    </div>
+
 </div>

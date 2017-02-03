@@ -1,5 +1,5 @@
-# agency-pkg-blueprint
+# agency-pkg-swiper
 
-> Package-Pattern for [agency-boilerplate](https://github.com/agency-framework/agency-boilerplate)
+> Swiper Package-Pattern for [agency-boilerplate](https://github.com/agency-framework/agency-boilerplate)
 
-Blueprint for agency-boilerplate packages.
+Swiper package for agency-boilerplate.
